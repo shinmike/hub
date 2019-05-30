@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import Reviews from './Reviews';
 import AddReview from './AddReview';
 import Nav from '../components/Nav';
-
+import Slider from './Slider';
 import moment from 'moment';
-
 import menu from "./menu.json";
 
 
@@ -85,7 +84,9 @@ class HomePage extends Component {
       <div className="container">
         <Nav />
         <h1 className="display-2 text-center mt-3">Hub Reviews</h1>
-        <input type="text" className="form-control" onChange={this.onChange} />
+        <Slider />
+        <h1 className="display-2 text-center mt-3">Other Specials</h1>
+        <input type="text" className="form-control mt-3" onChange={this.onChange} placeholder="Search..." />
         <div className="row">
           <div className="card-columns">
 
@@ -98,6 +99,6 @@ class HomePage extends Component {
       </div>
     );
   }
-}
+};
 
 export default HomePage;

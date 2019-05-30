@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import HomePage from "./homepage/App.js";
