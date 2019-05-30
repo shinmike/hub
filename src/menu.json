@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Butter Chicken",
+    "image": "https://static01.nyt.com/images/2014/08/24/magazine/24eat/mag-24Eat-t_CA0-articleLarge.jpg",
+    "description": "Authentic in house made sauce of butter, spices, tomato and ginger garlic mix with pieces of chicken breast to produce the most popular dish in the world, served with naan bread & basmati rice."
+  },
+  {
+    "id": 2,
+    "title": "Fish and Chips",
+    "image": "https://media-cdn.tripadvisor.com/media/photo-p/12/20/b3/da/barton-fish-chips.jpg",
+    "description": "Mild flavoured, moist, cooked in signature tempura style batter. Tender, crisp, wholesome goodness. Served with fresh cut fries and signature tartar sauce."
+  },
+  {
+    "id": 3,
+    "title": "Halloumi",
+    "image": "https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/2015-r-xl-grilled-halloumi-and-lentil-salad.jpg?itok=yfaP7IKN",
+    "description": "Beer Battered Halloumi, Zucchini + Potato Pancake, Smashed Peas, Mint Yogurt, Acorn Garden Lemon Balm."
+  }
+]
