@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import HomePage from "./homepage/App.js";
-import FoodPage from "./foodpage";
+import FoodPage from "./foodpage/index.js";
 
 class App extends Component {
 
@@ -10,7 +10,7 @@ class App extends Component {
             <div className="body">
                 <Switch>
                     <Route exact path="/" component={HomePage}></Route>
-                    <Route exact path="meal/:number" component={FoodPage}></Route>
+                    <Route exact path="/meal/:number" component={FoodPage}></Route>
                 </Switch>
             </div>
         )

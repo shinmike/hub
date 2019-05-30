@@ -7,7 +7,9 @@ class FoodPage extends Component {
 
         return (
             <div className="container">
-
+                <div>
+                    
+                </div>
             </div>
         );
     }

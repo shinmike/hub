@@ -5,6 +5,7 @@ import Nav from '../components/Nav';
 import Slider from './Slider';
 import moment from 'moment';
 import menu from "./menu.json";
+import { Link } from "react-router-dom";
 
 
 class HomePage extends Component {
@@ -44,7 +45,7 @@ class HomePage extends Component {
     review.id = Math.random();
     review.img = "https://via.placeholder.com/150";
     review.timeStamp = moment().format("YYYYMMDD")
-    
+
     let reviews = [...this.state.reviews, review]
     this.setState({
       reviews
@@ -53,17 +54,19 @@ class HomePage extends Component {
 
   renderMenu = (menu) => {
     return (
-      <div className="card col-md mt-3 shadow-sm p-3 mb-5 bg-white rounded" key={menu.id}>
-        <img src={menu.image} className="card-img-top" alt="..." />
-        <div className="card-body">
-          <h5 className="card-title">{menu.title}</h5>
-          <p className="card-text">{menu.description}</p>
+      <Link key={menu.id} to={"meal/" + menu.id}>
+        <div className="card col-md mt-3 shadow-sm p-3 mb-5 bg-white rounded" key={menu.id}>
+          <img src={menu.image} className="card-img-top" alt="..." />
+          <div className="card-body">
+            <h5 className="card-title">{menu.title}</h5>
+            <p className="card-text">{menu.description}</p>
+          </div>
+          <AddReview addReview={this.addReview} />
+          <ul className="list-group list-group-flush">
+            <Reviews reviews={this.state.reviews} deleteReview={this.deleteReview} />
+          </ul>
         </div>
-        <AddReview addReview={this.addReview} />
-        <ul className="list-group list-group-flush">
-          <Reviews reviews={this.state.reviews} deleteReview={this.deleteReview} />
-        </ul>
-      </div>
+      </Link>
     )
   }
 
