@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Reviews from './Reviews';
 import AddReview from './AddReview';
-import Nav from './Nav';
+import Nav from '../components/Nav';
 
 import moment from 'moment';
 
 import menu from "./menu.json";
 
 
-class App extends Component {
+class HomePage extends Component {
 
   state = {
     reviews: [
@@ -100,4 +100,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default HomePage;
