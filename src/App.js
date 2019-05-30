@@ -87,7 +87,8 @@ class App extends Component {
         <Nav />
         <h1 className="display-2 text-center mt-3">Hub Reviews</h1>
         <Slider />
-        <input type="text" className="form-control mt-3" onChange={this.onChange} />
+        <h1 className="display-2 text-center mt-3">Other Specials</h1>
+        <input type="text" className="form-control mt-3" onChange={this.onChange} placeholder="Search..." />
         <div className="row">
           <div className="card-columns">
 
