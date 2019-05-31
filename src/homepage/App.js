@@ -86,10 +86,14 @@ class HomePage extends Component {
     return (
       <div className="container">
         <Nav />
+        <div className="row">
+          <div className>
+          <input type="text" className="form-control mt-3" onChange={this.onChange} placeholder="Search..." />
+          </div>
+        </div>
         <h1 className="display-2 text-center mt-3">Daily Special</h1>
         <Slider />
         <h1 className="display-2 text-center mt-3">Reviews</h1>
-        <input type="text" className="form-control mt-3" onChange={this.onChange} placeholder="Search..." />
         <div className="row">
           <div className="card-columns">
 

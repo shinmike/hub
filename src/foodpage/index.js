@@ -75,12 +75,12 @@ class FoodPage extends Component {
                 <Nav />
                 <div className="card mb-3 mt-5">
                     <div className="row no-gutters">
-                        <div className="col-md-6 d-flex">
+                        <div className="col-md-8 d-flex">
                             <img src={itemContentImage} className="card-img" alt="..." />
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-md-4">
                             <div className="card-body">
-                                <h2 className="card-title">{itemContentTitle}</h2>
+                                <h2 className="card-title">{itemContentTitle} <i class="fa fa-shopping-cart"></i></h2>
                                 <p className="card-text">{itemContentDescription}</p>
                                 <Reviews reviews={this.state.reviews} />
                             </div>
