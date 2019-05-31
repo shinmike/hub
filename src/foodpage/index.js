@@ -68,13 +68,13 @@ class FoodPage extends Component {
         rating: 4
     }
 
-    handlePreOrder() {
-        alert("Your order has been placed! Your order number is 7. Estimated Wait: 5 minutes")
-    }
+    // handlePreOrder() {
+    //     alert("Your order has been placed! Your order number is 7. Estimated Wait: 5 minutes")
+    // }
 
     onStarClick(nextValue, prevValue, name) {
         this.setState({ rating: nextValue });
-      }
+    }
 
     render() {
 
@@ -97,7 +97,24 @@ class FoodPage extends Component {
                         </div>
                         <div className="col-md-4">
                             <div className="card-body">
-                                <h2 className="card-title">{itemContentTitle} <i class="fa fa-shopping-cart" onClick={this.handlePreOrder}></i></h2>
+                                <h2 className="card-title">{itemContentTitle} <i className="fa fa-shopping-cart" data-toggle="modal" data-target="#exampleModal" onClick={this.handlePreOrder}></i></h2>
+                                
+                                <div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog" role="document">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="exampleModalLabel">Success, your order has been placed!</h5>
+                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div className="modal-body">
+                         Your order number is 7. Estimated Wait: 5 minutes
+            </div>
+                    </div>
+                </div>
+            </div>
+
                                 <StarRatingComponent
                                     name="rate1"
                                     starCount={5}
@@ -112,7 +129,7 @@ class FoodPage extends Component {
                 </div>
 
 
-                
+
             </div>
 
 
