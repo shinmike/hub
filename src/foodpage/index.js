@@ -3,6 +3,8 @@ import Nav from "../components/Nav"
 import menu from "../homepage/menu.json"
 import Reviews from '../homepage/Reviews';
 
+import StarRatingComponent from 'react-star-rating-component';
+
 class FoodPage extends Component {
 
     state = {
@@ -13,7 +15,8 @@ class FoodPage extends Component {
                 content: "Not enough chicken. Sauce is a bit watery",
                 img: "https://int.nyt.com/applications/cooking/2161306/assets/user-img-fish.png",
                 timeStamp: 20190320,
-                menuItem: 1
+                menuItem: 1,
+                rating: 4
             },
             {
                 id: 2,
@@ -21,7 +24,8 @@ class FoodPage extends Component {
                 content: "It was really good!",
                 img: "https://int.nyt.com/applications/cooking/2161306/assets/user-img-tomato.png",
                 timeStamp: 20190420,
-                menuItem: 2
+                menuItem: 2,
+                rating: 5
             },
             {
                 id: 3,
@@ -29,7 +33,8 @@ class FoodPage extends Component {
                 content: "It was super good!",
                 img: "https://int.nyt.com/applications/cooking/2161306/assets/user-img-tomato.png",
                 timeStamp: 20190420,
-                menuItem: 2
+                menuItem: 2,
+                rating: 4
             },
             {
                 id: 4,
@@ -37,7 +42,8 @@ class FoodPage extends Component {
                 content: "It was really incredible!",
                 img: "https://int.nyt.com/applications/cooking/2161306/assets/user-img-tomato.png",
                 timeStamp: 20190420,
-                menuItem: 2
+                menuItem: 2,
+                rating: 2
             },
             {
                 id: 5,
@@ -45,7 +51,8 @@ class FoodPage extends Component {
                 content: "Amazing!",
                 img: "https://int.nyt.com/applications/cooking/2161306/assets/user-img-tomato.png",
                 timeStamp: 20190420,
-                menuItem: 2
+                menuItem: 2,
+                rating: 2
             },
             {
                 id: 6,
@@ -53,11 +60,21 @@ class FoodPage extends Component {
                 content: "Woohoo!",
                 img: "https://int.nyt.com/applications/cooking/2161306/assets/user-img-tomato.png",
                 timeStamp: 20190420,
-                menuItem: 2
+                menuItem: 2,
+                rating: 4
             }
         ],
         search: '',
+        rating: 4
     }
+
+    handlePreOrder() {
+        alert("Your order has been placed! Your order number is 7. Estimated Wait: 5 minutes")
+    }
+
+    onStarClick(nextValue, prevValue, name) {
+        this.setState({ rating: nextValue });
+      }
 
     render() {
 
@@ -80,7 +97,13 @@ class FoodPage extends Component {
                         </div>
                         <div className="col-md-4">
                             <div className="card-body">
-                                <h2 className="card-title">{itemContentTitle} <i class="fa fa-shopping-cart"></i></h2>
+                                <h2 className="card-title">{itemContentTitle} <i class="fa fa-shopping-cart" onClick={this.handlePreOrder}></i></h2>
+                                <StarRatingComponent
+                                    name="rate1"
+                                    starCount={5}
+                                    value={this.state.rating}
+                                    onStarClick={this.onStarClick.bind(this)}
+                                />
                                 <p className="card-text">{itemContentDescription}</p>
                                 <Reviews reviews={this.state.reviews} />
                             </div>

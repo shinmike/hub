@@ -18,7 +18,8 @@ class HomePage extends Component {
         content: "Not enough chicken. Sauce is a bit watery",
         img: "https://int.nyt.com/applications/cooking/2161306/assets/user-img-fish.png",
         timeStamp: 20190320,
-        menuItem: 1
+        menuItem: 1,
+        rating: 2
       },
       {
         id: 2,
@@ -26,7 +27,8 @@ class HomePage extends Component {
         content: "It was really good!",
         img: "https://int.nyt.com/applications/cooking/2161306/assets/user-img-tomato.png",
         timeStamp: 20190420,
-        menuItem: 2
+        menuItem: 2,
+        rating: 4
       }
     ],
     search: '',

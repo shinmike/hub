@@ -1,7 +1,10 @@
 import React from 'react';
 import moment from 'moment';
+import StarRatingComponent from 'react-star-rating-component';
 
 const Reviews = ({ reviews, deleteReview }) => {
+
+
 
   const reviewsList = reviews.length ? (
     reviews
@@ -21,6 +24,12 @@ const Reviews = ({ reviews, deleteReview }) => {
               <h5 className="card-title">{review.name}</h5>
               <p className="card-text">{review.content}</p>
               <p className="card-text"><small className="text-muted">Commented {momentTimestampConvert}</small></p>
+              <StarRatingComponent
+                                    name="rate1"
+                                    starCount={5}
+                                    value={review.rating}
+                                    onStarClick={() => {}}
+                                />
             </div>
           </div>
         </div>

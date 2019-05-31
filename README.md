@@ -66,3 +66,6 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+Add this to fake the buttons on the menu
+<a href="http://localhost:3000/meal/2" style="margin-left:20px"> Order Now </a>
