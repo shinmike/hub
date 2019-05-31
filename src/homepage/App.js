@@ -54,19 +54,19 @@ class HomePage extends Component {
 
   renderMenu = (menu) => {
     return (
-      <Link key={menu.id} to={"meal/" + menu.id}>
         <div className="card col-md mt-3 shadow-sm p-3 mb-5 bg-white rounded" key={menu.id}>
+          <Link key={menu.id} to={"meal/" + menu.id}>
           <img src={menu.image} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">{menu.title}</h5>
             <p className="card-text">{menu.description}</p>
           </div>
+          </Link>
           <AddReview addReview={this.addReview} />
           <ul className="list-group list-group-flush">
             <Reviews reviews={this.state.reviews} deleteReview={this.deleteReview} />
           </ul>
         </div>
-      </Link>
     )
   }
 
