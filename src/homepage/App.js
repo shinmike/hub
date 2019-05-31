@@ -55,7 +55,7 @@ class HomePage extends Component {
   renderMenu = (menu) => {
     return (
         <div className="card col-md mt-3 shadow-sm p-3 mb-5 bg-white rounded" key={menu.id}>
-          <Link key={menu.id} to={"meal/" + menu.id}>
+          <Link key={menu.id} to={"meal/" + menu.id} style={{ textDecoration: 'none', color: 'black' }}>
           <img src={menu.image} className="card-img-top" alt="..." />
           <div className="card-body">
             <h5 className="card-title">{menu.title}</h5>
