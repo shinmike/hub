@@ -14,9 +14,9 @@ class HomePage extends Component {
     reviews: [
       {
         id: 1,
-        name: "Rebecca",
+        name: "Georgene",
         content: "Not enough chicken. Sauce is a bit watery",
-        img: "https://int.nyt.com/applications/cooking/2161306/assets/user-img-fish.png",
+        img: "../img/avatar2.jpeg",
         timeStamp: 20190320,
         menuItem: 1,
         rating: 2
@@ -25,7 +25,7 @@ class HomePage extends Component {
         id: 2,
         name: "John",
         content: "It was really good!",
-        img: "https://int.nyt.com/applications/cooking/2161306/assets/user-img-tomato.png",
+        img: "../img/avatar1.jpeg",
         timeStamp: 20190420,
         menuItem: 2,
         rating: 4
@@ -45,7 +45,7 @@ class HomePage extends Component {
 
   addReview = (review) => {
     review.id = Math.random();
-    review.img = "https://via.placeholder.com/150";
+    review.img = "../img/avatar3.jpeg";
     review.timeStamp = moment().format("YYYYMMDD")
 
     let reviews = [...this.state.reviews, review]
