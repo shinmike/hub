@@ -11,27 +11,27 @@ class FoodPage extends Component {
         reviews: [
             {
                 id: 1,
-                name: "Rebecca",
-                content: "Not enough chicken. Sauce is a bit watery",
-                img: "https://int.nyt.com/applications/cooking/2161306/assets/user-img-fish.png",
+                name: "Georgene",
+                content: "Not enough chips.",
+                img: "../img/avatar2.jpeg",
                 timeStamp: 20190320,
                 menuItem: 1,
-                rating: 4
+                rating: 1
             },
             {
                 id: 2,
                 name: "John",
                 content: "It was really good!",
-                img: "https://int.nyt.com/applications/cooking/2161306/assets/user-img-tomato.png",
+                img: "../img/avatar1.jpeg",
                 timeStamp: 20190420,
                 menuItem: 2,
                 rating: 5
             },
             {
                 id: 3,
-                name: "Calvin",
-                content: "It was super good!",
-                img: "https://int.nyt.com/applications/cooking/2161306/assets/user-img-tomato.png",
+                name: "Tina",
+                content: "They should have this menu daily. Love it!",
+                img: "../img/avatar4.jpeg",
                 timeStamp: 20190420,
                 menuItem: 2,
                 rating: 4

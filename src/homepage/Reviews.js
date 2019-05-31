@@ -14,7 +14,7 @@ const Reviews = ({ reviews, deleteReview }) => {
       const momentTimestampConvert = moment(review.timeStamp, "YYYYMMDD").fromNow()
 
       return (
-      <div className="card mb-3" key={review.id} onClick={() => { deleteReview(review.id) }}>
+      <div className="card mb-3" key={review.id} onClick={() => { }}>
         <div className="row no-gutters">
           <div className="col-4 p-3">
             <img src={review.img} className="card-img" alt="..." />
