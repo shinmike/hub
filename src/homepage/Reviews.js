@@ -4,7 +4,9 @@ import moment from 'moment';
 const Reviews = ({ reviews, deleteReview }) => {
 
   const reviewsList = reviews.length ? (
-    reviews.map(review => {
+    reviews
+      .filter((review, index) => index < 3)
+      .map(review => {
 
       const momentTimestampConvert = moment(review.timeStamp, "YYYYMMDD").fromNow()
 
