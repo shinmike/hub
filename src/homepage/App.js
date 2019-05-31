@@ -87,8 +87,9 @@ class HomePage extends Component {
       <div className="container">
         <Nav />
         <div className="row">
-          <div className>
-          <input type="text" className="form-control mt-3" onChange={this.onChange} placeholder="Search..." />
+          <div className="col-9"></div>
+          <div className="col-md-3">
+          <input type="text" className="form-control" onChange={this.onChange} placeholder="Search..." />
           </div>
         </div>
         <h1 className="display-2 text-center mt-3">Daily Special</h1>
